@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RAS.TimeSheets.MVC", "RAS.TimeSheets.MVC\RAS.TimeSheets.MVC.csproj", "{DD286C3B-9082-4C79-B738-39E0B97DE35A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RAS.TimeSheets.Domain", "RAS.TimeSheets.Domain\RAS.TimeSheets.Domain.csproj", "{1FD950DA-9CDB-4EF0-9012-9EE02E41C908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RAS.TimeSheets.Persistance", "RAS.TimeSheets.Persistance\RAS.TimeSheets.Persistance.csproj", "{27457850-241D-4C8C-AD64-09B500C1E52E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD286C3B-9082-4C79-B738-39E0B97DE35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD286C3B-9082-4C79-B738-39E0B97DE35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD286C3B-9082-4C79-B738-39E0B97DE35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD286C3B-9082-4C79-B738-39E0B97DE35A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD950DA-9CDB-4EF0-9012-9EE02E41C908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD950DA-9CDB-4EF0-9012-9EE02E41C908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD950DA-9CDB-4EF0-9012-9EE02E41C908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD950DA-9CDB-4EF0-9012-9EE02E41C908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27457850-241D-4C8C-AD64-09B500C1E52E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27457850-241D-4C8C-AD64-09B500C1E52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27457850-241D-4C8C-AD64-09B500C1E52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27457850-241D-4C8C-AD64-09B500C1E52E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AFB925B-232F-4B06-9787-45F40144E609}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://saeedhashemzdeh.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RAS.TimeSheets.Domain\\RAS.TimeSheets.Domain.csproj
+		SccProjectName1 = RAS.TimeSheets.Domain
+		SccLocalPath1 = RAS.TimeSheets.Domain
+		SccProjectUniqueName2 = RAS.TimeSheets.Persistance\\RAS.TimeSheets.Persistance.csproj
+		SccProjectName2 = RAS.TimeSheets.Persistance
+		SccLocalPath2 = RAS.TimeSheets.Persistance
+		SccProjectUniqueName3 = RAS.TimeSheets.MVC\\RAS.TimeSheets.MVC.csproj
+		SccProjectName3 = RAS.TimeSheets.MVC
+		SccLocalPath3 = RAS.TimeSheets.MVC
+	EndGlobalSection
+EndGlobal

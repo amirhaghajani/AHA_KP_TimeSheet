@@ -1,0 +1,8 @@
+﻿body {
+}
+
+.gradient-Darkblue {
+ 
+  background-color: #1e4854; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#31939d, #157e91); /* Standard syntax (must be last) */
+}

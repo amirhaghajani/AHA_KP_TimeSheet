@@ -1,0 +1,107 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles/demo.css">
+
+<!--Insert this once for animated icons-->
+<script src="../dist/js/titanic.min.js"></script>
+<script src="../dist/vendor/bodymovin.min.js"></script>
+</head>
+
+<body>
+
+
+<!--Container for all icons-->
+<div class="block">
+    <label>Send event to an icon</label>
+    <input id="myInput" value="checkbox">
+    <button onclick="titanic.play(getElementById('myInput').value)">Play</button>
+    <button onclick="titanic.on(getElementById('myInput').value)">On</button>
+    <button onclick="titanic.off(getElementById('myInput').value)">Off</button><br />
+
+
+    <div class='titanic titanic-checkbox'></div>
+    <div class='titanic titanic-expand'></div>
+    <div class='titanic titanic-cheap'></div>
+    <div class='titanic titanic-expensive'></div>
+    <div class='titanic titanic-mailbox'></div>
+    <div class='titanic titanic-mic'></div>
+    <div class='titanic titanic-no-mic'></div>
+    <div class='titanic titanic-online'></div>
+    <div class='titanic titanic-caps'></div>
+    <div class='titanic titanic-pin'></div>
+    <div class='titanic titanic-chat'></div>
+    <div class='titanic titanic-idea'></div>
+    <div class='titanic titanic-power'></div>
+    <div class='titanic titanic-pause'></div>
+    <div class='titanic titanic-shopping'></div>
+    <div class='titanic titanic-smile'></div>
+    <div class='titanic titanic-stop'></div>
+    <div class='titanic titanic-unlock'></div>
+    <div class='titanic titanic-zoom'></div>
+    
+    <!--2-->
+    <div class='titanic titanic-broken-link'></div>
+    <div class='titanic titanic-clear-filters'></div>
+    <div class='titanic titanic-deposit-withdrawal'></div>
+    <div class='titanic titanic-menu-close'></div>
+    <div class='titanic titanic-open-closed'></div>
+    <div class='titanic titanic-open-message'></div>
+    <div class='titanic titanic-search-close'></div>
+    <div class='titanic titanic-shipped'></div>
+    <div class='titanic titanic-sorting-alphabet'></div>
+    <div class='titanic titanic-sorting-numerical'></div>
+    <div class='titanic titanic-switch'></div>
+    <div class='titanic titanic-toggle'></div>
+        
+    <!--3-->
+    <div class='titanic titanic-restart'></div>
+    <div class='titanic titanic-install'></div>
+    <div class='titanic titanic-folder'></div>
+    <div class='titanic titanic-buy'></div>
+    <div class='titanic titanic-rotate-phone'></div>
+    <div class='titanic titanic-mute'></div>
+    <div class='titanic titanic-volume-1'></div>
+    <div class='titanic titanic-volume-2'></div>
+    <div class='titanic titanic-trash'></div>
+    <div class='titanic titanic-cloud'></div>
+    <div class='titanic titanic-hourglass'></div>
+    <div class='titanic titanic-delete'></div>
+    <div class='titanic titanic-twitter'></div>
+    <div class='titanic titanic-facebook'></div>
+    <div class='titanic titanic-youtube'></div>
+    <div class='titanic titanic-right-left'></div>
+    <div class='titanic titanic-up-down'></div>
+    <div class='titanic titanic-expand-arrow'></div>
+    <div class='titanic titanic-forward-arrow'></div>
+    <div class='titanic titanic-thumb'></div>
+    <div class='titanic titanic-facebook-like'></div>
+    <div class='titanic titanic-star'></div>
+    <div class='titanic titanic-heart'></div>
+    <div class='titanic titanic-eye'></div>
+    <div class='titanic titanic-refresh-wait'></div>
+    
+    <!--4-->
+    <div class='titanic titanic-menu-arrow'></div>
+    <div class='titanic titanic-menu-minus'></div>
+    <div class='titanic titanic-shield'></div>
+    <div class='titanic titanic-speech'></div>
+    
+    
+    
+</div>
+
+<script>
+    var titanic = new Titanic('https://rawgit.com/icons8/titanic/master/src/icons/'); // initialization
+    // API
+    // titanic.isInitialized()
+    // -- just true/false flag
+    // titanic.items
+    // -- list of titanic items
+    // titanic.items[index].on(), titanic.items[index].off(), titanic.items[index].play()
+    // -- play animations of the titanic item by index
+    // titanic.on(token), titanic.off(token), titanic.play(token)
+    // -- play animations of the titanic item by token (name)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+﻿
+<body dir="rtl">
+
+    <div id="Loader" class="glass" style="display:none;">
+        <div style="position:absolute; right:45%; top:40% ">  <img style="width:200px; z-index:11000" class="img-responsive" src="~/Images/Cube.gif" /></div>
+    </div>
+    <div class="main-wrapper">
+        <!-- Header Section Start -->
+        <div class="header-section ">
+            <div class="container-fluid">
+                <div class="row justify-content-between align-items-center">
+                    <!-- Header Logo (Header Left) Start -->
+                    <div class="header-logo col-auto">
+                        <a href="@Url.Action("Index","Home")" title="خانه">
+                            <img src="~/Images/KPE/KPE.png" style="height:90px" class="image img-responsive" />
+                            <img src="~/Images/KPE/KPE.png" style="height:90px" class="logo-light image img-responsive" alt="">
+                        </a>
+                        <button title="منوی اصلی" class="side-header-toggle" style="color:#003d85"><i class="ti-view-list"></i></button>
+                    </div><!-- Header Logo (Header Left) End -->
+                    <!-- Header Right Start -->
+                    <div class="header-right flex-grow-1 col-auto pull-left">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Side Header Toggle & Search Start -->
+                            <!-- Header Notifications Area Start -->
+                            <div class="pull-left">
+                                <ul class="header-notification-area">
+                                    <li class="adomx-dropdown col-auto">
+                                        <a class="toggle" href="#">
+                                            <span class="user">
+                                                <span style="color:white;margin-left:5px;margin-top:5px" class="name">@User.Identity.Name</span>
+                                                <span class="avatar">
+                                                    <img class="image img-circle img-responsive " src="~/Images/User.png" />
+                                                    <span class="status"></span>
+                                                </span>
+
+                                            </span>
+                                        </a>
+                                        <!-- Dropdown -->
+                                        <div class="adomx-dropdown-menu dropdown-menu-user">
+                                            <div class="head center-block">
+
+                                                <h6>  @User.Identity.Name </h6>
+                                                <b>به سیستم خوش آمدید</b>
+                                            </div>
+                                            <div class="body">
+
+                                                <ul>
+                                                    <li><a href="@Url.Action("LoginOtherUser","Home")"><i class="zmdi zmdi zmdi-edit"></i>ورود با کاربر دیگر</a></li>
+                                                    <li><a href="@Url.Action("Logout","Home")"><i class="zmdi zmdi-lock-open"></i>خروج</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- Header Notifications Area End -->
+                        </div>
+                    </div><!-- Header Right End -->
+                </div>
+            </div>
+        </div><!-- Header Section End -->
+        <!-- Side Header Start -->
+        <div class="side-header show">
+            <button class="side-header-close"><i class="zmdi zmdi-close"></i></button>
+            <!-- Side Header Inner Start -->
+            <div class="side-header-inner custom-scroll">
+                <nav class="side-header-menu" id="side-header-menu">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index","Home")"><i class="ti-home"></i> <span>خانه</span></a>
+                            <hr />
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="ti-alarm-clock"></i> <span>برگه زمانی ثبت</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("Register","TimeSheets")"><span>ثبت ساعت</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="ti-check-box"></i> <span>تاییدات برگه زمانی</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("Confirmation","TimeSheets")"><span>تایید برگه زمانی </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="ti-car"></i> <span> ثبت مرخصی و ماموریت</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("Index","DailyLeaves")"><span>ثبت مرخصی روزانه</span></a></li>
+                                <li><a href="@Url.Action("Index","HourlyLeaves")"><span>ثبت مرخصی ساعتی</span></a></li>
+                                <li><a href="@Url.Action("Index","HourlyMissions")"><span>ثبت ماموریت ساعتی</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="zmdi zmdi-check-all"></i> <span> تاییدات مرخصی و ماموریت</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("ApproveIndex","DailyLeaves")"><span>تایید مرخصی روزانه</span></a></li>
+                                <li><a href="@Url.Action("ApproveIndex","HourlyLeaves")"><span>تایید مرخصی ساعتی</span></a></li>
+                                <li><a href="@Url.Action("ApproveIndex","HourlyMissions")"><span>تایید ماموریت ساعتی</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="ti-settings"></i> <span> تنظیمات </span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("Calendar","Settings")"><span>تقویم سازمانی</span></a></li>
+                                <li><a href="@Url.Action("Departments","Settings")"><span>واحد های سازمانی</span></a></li>
+                                @*<li><a href="@Url.Action("Index","Tasks")"><span>افزودن وظیفه جدید</span></a></li>*@
+                                <li><a href="@Url.Action("Sync","Home")"><span>همگام سازی PWA</span></a></li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#"><i class="ti-bar-chart-alt"></i> <span> گزارشات </span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="@Url.Action("BreakingProjectsByMonth","Reports")"><span>گزارش پروژه ها به تفکیک ماه</span></a></li>
+                                <li><a href="@Url.Action("BreakingProjectByMonth","Reports")"><span>گزارش یک پروژه به تفکیک ماه</span></a></li>
+                                <li><a href="@Url.Action("PersonelsAndProjects", "Reports")"><span>گزارش ماتریسی پرسنل و پروژه ها</span></a></li>
+                                <li><a href="@Url.Action("TotalWorkHoursOnProjects", "Reports")"><span>گزارش کلی پروژه ها</span></a></li>
+                                <li><a href="@Url.Action("DailyOnProjects", "Reports")"><span>گزارش روزانه پروژه ها </span></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div><!-- Side Header Inner End -->
+        </div><!-- Side Header End -->
+        <!-- Content Body Start -->
+        <div class="content-body">
+
+            @RenderBody()
+
+        </div><!-- Content Body End -->
+        @*<nav class="nav navbar-fixed-bottom navbar-inverse">
+                <footer>
+                    <p style="margin-right:50%;margin-top:15px;color:white">&copy; @DateTime.Now.Year - راهکار اندیشان سپاروک</p>
+                </footer>
+            </nav>*@
+    </div>
+    <!-- Footer Section Start -->
+    <!-- JS
+    ============================================ -->
+    <!-- Global Vendor, plugins & Activation JS -->
+    <!--Plugins JS-->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.rtl.min.css" rel="stylesheet" />
+    <script src="~/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/assets/js/plugins/tippy4.min.js.js"></script>
+    <!--Main JS-->
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.rtl.min.js"></script>
+    <script src="~/Scripts/bootstrap.notify.js"></script>
+    <script src="~/Scripts/bootstrap.notify.min.js"></script>
+    <script src="~/Scripts/all.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
+    <script src="~/assets/js/plugins/vmap/jquery.vmap.min.js"></script>
+    <script src="~/assets/js/plugins/vmap/maps/jquery.vmap.world.js"></script>
+    <script src="~/assets/js/plugins/vmap/maps/samples/jquery.vmap.sampledata.js"></script>
+    <script src="~/assets/js/plugins/vmap/vmap.active.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <!-- Plugins & Activation JS For Only This Page -->
+    <!--Moment-->
+    <script src="~/assets/js/plugins/moment/moment.min.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    @RenderSection("scripts", required: false)
+</body>
+
+
+
+
+
+
+
+
+
+
+<div id="mySidebar" class="rasrasSidebar">
+    <div class="side-header">
+        <div class="side-header-inner custom-scroll">
+            <nav class="side-header-menu" id="side-header-menu">
+                <ul>
+                    <li class="has-sub-menu">
+
+                        <a href="@Url.Action("Index","Home")">
+                            <i title="خانه" class="ti-home pull-left ras-sidebar-left-logo" style="font-size:24px ; margin-left:-15px;color:white"></i>
+                            <i class="ti-home"></i> <span>خانه</span>
+
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="has-sub-menu">
+                        <i title="برگه زمانی ثبت" class="ti-alarm-clock pull-left ras-sidebar-left-logo" style="font-size:24px ; margin-left:-15px;color:white"></i>
+                        <a href="#">
+                            <i class="ti-alarm-clock">
+                            </i> <span>برگه زمانی ثبت</span>
+                        </a>
+                        <ul class="side-header-sub-menu">
+                            <li><a href="@Url.Action("Register","TimeSheets")"><span>ثبت ساعت</span></a></li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="has-sub-menu">
+                        <a href="#">
+                            <i title="خانه" class="ti-check-box pull-left ras-sidebar-left-logo" style="font-size:24px ; margin-left:-15px;color:white"></i>
+                            <i class="ti-check-box"></i> <span>تنظیمات</span>
+                        </a>
+                        <ul class="side-header-sub-menu">
+                            <li><a href="@Url.Action("SyncUser","Home")"><span> همگام سازی کاربران</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

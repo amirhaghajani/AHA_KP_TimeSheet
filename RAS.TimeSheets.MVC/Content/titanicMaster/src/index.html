@@ -1,0 +1,69 @@
+<html>
+<head>
+  <style>
+
+    .titanic {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+
+      /*Decoration for the presentation only, remove it when using on your own*/
+      padding: 20px;
+    }
+
+    .titanic path {
+      fill: #249795;
+      stroke: #249795;
+    }
+
+    body {
+      display: table;
+      height: 100%;
+      margin: 0;
+    }
+
+    .block {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0 50px;
+    }
+  </style>
+
+  <!--Insert this once for animated icons-->
+  <!-- inject:js -->
+  <!-- endinject -->
+  <script src="./js/titanic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
+</head>
+
+
+<body>
+
+<!--Container for all icons-->
+<div class="block">
+
+  <div class='titanic titanic-broken-link'></div>
+  <div class='titanic titanic-clear-filters'></div>
+  <div class='titanic titanic-deposit-withdrawal'></div>
+  <div class='titanic titanic-menu-close'></div>
+  <div class='titanic titanic-open-closed'></div>
+  <div class='titanic titanic-open-message'></div>
+  <div class='titanic titanic-search-close'></div>
+  <div class='titanic titanic-shipped'></div>
+  <div class='titanic titanic-sorting-alphabet'></div>
+  <div class='titanic titanic-sorting-numerical'></div>
+  <div class='titanic titanic-switch'></div>
+  <div class='titanic titanic-toggle'></div>
+
+</div>
+
+<script>
+  var titanic = new Titanic({
+    hover: true,
+    click: true
+  })
+</script>
+
+</body>
+</html>
