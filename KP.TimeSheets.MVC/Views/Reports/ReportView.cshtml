@@ -1,0 +1,67 @@
+﻿@model KP.TimeSheets.MVC.FinalReport
+
+@{
+    ViewBag.Title = "ReportView";
+}
+
+<script src="~/Tools/ExpotTool/libs/FileSaver/FileSaver.min.js"></script>
+<script src="~/Tools/ExpotTool/libs/jsPDF/jspdf.min.js"></script>
+<script src="~/Tools/ExpotTool/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<script src="~/Tools/ExpotTool/libs/html2canvas/html2canvas.min.js"></script>
+<script src="~/Tools/ExpotTool/tableExport.js"></script>
+<link href="~/Content/Reports.css" rel="stylesheet" />
+
+<div class="panel panel-info shadow" style="margin-top:10px">
+    <div style="text-align:center" class="panel-heading">@Model.HeaderTitle</div>
+    <div class="panel-body" style="overflow:auto;width:100% !important ">
+        @*<h2 style="font-size:0.8vw;margin-bottom:5px" class="ras-center"><b>@Model.HeaderTitle</b></h2>*@
+        @if (Model.Fields != null)
+        {
+
+
+            <nav class="nav ras-exportbar" >
+                <div class="form-inline">
+                    <a  title="خروجی اکسل" href="#" onClick="doExport('#TBLReport', {type: 'excel'});"> <img src="~/Images/icons/xls.png" alt="XLS" style="width:24px"> </a>
+                    <a title="خروجی ورد" style="margin:5px" href="#" onClick="doExport('#TBLReport', { type: 'doc' });"> <img src='~/Images/icons/word.png' alt="Word" style="width:24px"> </a>
+                    @*<a href="#" onClick="doExport('#TBLReport', { type: 'pdf' });"> <img src='~/Images/icons/pdf.png' alt="PNG" style="width:24px"> </a>*@
+                   
+                </div>
+
+            </nav>
+
+            <table id="TBLReport" class="table table-bordered table-striped" style="margin-top:10px;margin-left:10px  ">
+               
+                <thead>
+                    <tr>
+                        <th style="text-align:center">@Model.FirstColumnTitle</th>
+                        @foreach (var field  in Model.Fields)
+                        {
+                            <th  style="text-align:center" class="success"><h5>@field.Title</h5></th>
+                        }
+                    </tr>
+                </thead>
+                <tbody style="text-align:center">
+                    @foreach (var row in Model.Rowes)
+                {
+                        <tr>
+                            <td style="text-align:center">@row.Title</td>
+                            @foreach (var value in row.Values)
+                    {
+                                <td style="text-align:center">@value.Value</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        }
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+</script>
